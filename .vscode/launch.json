@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "GUIPractice.Main",
+            "projectName": "Java_Test_and_Workshop_65baac2d"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "CheckIfPrime.Main",
             "projectName": "Java_Test_and_Workshop_65baac2d"
         },
