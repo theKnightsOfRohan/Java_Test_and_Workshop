@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class Methods {
     public static void main(String[] args) {
-        System.out.println(roll2Dice());
-        System.out.println(roll2Dice());
+        ArrayList<Integer> arr = new ArrayList<>();
     }
     
     public static int countEven(int[] nums) {

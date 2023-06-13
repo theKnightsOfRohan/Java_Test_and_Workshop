@@ -4,10 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // BankUser user = new BankUser();
-        // Dog dog = new Dog();
-        // Card card = new Card("Spades", 1);
-        // Ballot ballot = new Ballot();
+
     }
 }
 
@@ -53,6 +50,15 @@ class BankUser {
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please try again.");
         }
+    }
+
+    // Create a method which prints all of the client's info in a readable format.
+    public void printInfo() {
+        System.out.println("Name: " + this.firstName + " " + this.lastName);
+        System.out.println("Birth Date: " + this.birthDate[0] + "/" + this.birthDate[1] + "/" + this.birthDate[2]);
+        System.out.println("Address: " + this.address[0] + ", " + this.address[1] + ", " + this.address[2]);
+        System.out.println("Phone Number: " + this.phoneNumber);
+        System.out.println("Email: " + this.email);
     }
 }
 
@@ -101,16 +107,22 @@ class Card {
         this.suit = suit;
         this.value = value;
 
-        if (value == 1) {
-            this.name = "Ace of " + suit;
-        } else if (value == 11) {
-            this.name = "Jack of " + suit;
-        } else if (value == 12) {
-            this.name = "Queen of " + suit;
-        } else if (value == 13) {
-            this.name = "King of " + suit;
-        } else {
-            this.name = value + " of " + suit;
+        switch (value) {
+            case 1:
+                this.name = "Ace of " + suit;
+                break;
+            case 11:
+                this.name = "Jack of " + suit;
+                break;
+            case 12:
+                this.name = "Queen of " + suit;
+                break;
+            case 13:
+                this.name = "King of " + suit;
+                break;
+            default:
+                this.name = value + " of " + suit;
+                break;
         }
 
         System.out.println("Created a new card: " + this.name);

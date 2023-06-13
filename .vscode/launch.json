@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "server.Client",
+            "projectName": "Java_Test_and_Workshop_65baac2d"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "server.Main",
+            "projectName": "Java_Test_and_Workshop_65baac2d"
+        },
+        {
+            "type": "java",
             "name": "Methods",
             "request": "launch",
             "mainClass": "ClassExercises.Methods",
