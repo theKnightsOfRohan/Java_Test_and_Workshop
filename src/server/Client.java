@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
+
         while (true) {
             try {
                 Socket socket = new Socket("localhost", 3000);
@@ -52,5 +54,15 @@ public class Client {
             e.printStackTrace();
             return null;
         }
+    }
+}
+
+class User {
+    private String username;
+    private String password;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 }

@@ -9,8 +9,8 @@ public class Window {
             Socket socket = null;
 
             try {
-                socket = new Socket("localhost", 3000);
-                System.out.println("Client started on port 3000.");
+                socket = new Socket("localhost", 3002);
+                System.out.println("Window started on port " + socket.getPort());
 
                 receive(socket);
             } catch (IOException e) {
@@ -21,6 +21,21 @@ public class Window {
                     socket.close();
                 }
             }
+        }
+    }
+
+    public static void send(String message, Socket socket) {
+        try {
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+            out.write(message);
+            out.newLine();
+            out.flush();
+            System.out.println("Client sent: " + message);
+
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
