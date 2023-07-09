@@ -15,6 +15,7 @@ public class PS1 {
         double radius = input.nextDouble();
         double area = Math.PI * Math.pow(radius, 2);
         System.out.println("The area of the circle is " + area);
+        input.close();
     }
 
     public static double calculateTriangleAreaHeron(double a, double b, double c) {

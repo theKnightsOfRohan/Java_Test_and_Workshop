@@ -45,6 +45,8 @@ public class PS2 {
 
             System.out.println("");
         }
+
+        input.close();
     }
 
     public static ArrayList<Integer> createList() {
@@ -63,6 +65,8 @@ public class PS2 {
             num = input.nextInt();
             input.nextLine();
         } while (num <= 10 || num >= 15);
+
+        input.close();
     }
 
     public static void roll3DiceUntilAll1s() {
@@ -104,6 +108,7 @@ public class PS2 {
         System.out.println("Enter a number: ");
         int num = input.nextInt();
         input.nextLine();
+        input.close();
 
         for (int i = num; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -118,6 +123,7 @@ public class PS2 {
         System.out.println("Enter a positive number: ");
         int num = input.nextInt() * 2 + 1;
         input.nextLine();
+        input.close();
 
         for (int i = 0; i < num; i++) {
             for (int j = 0; j < num; j++) {
