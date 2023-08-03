@@ -1,9 +1,8 @@
-package Processing;
+package Processing.Snake;
 
 import processing.core.PApplet;
 
 public class Main extends PApplet {
-
     public void settings() {
         size(500, 500);
     }
@@ -13,6 +12,7 @@ public class Main extends PApplet {
     }
 
     public void draw() {
+        background(0);
         if (mousePressed) {
             fill(255);
         } else {
@@ -23,6 +23,6 @@ public class Main extends PApplet {
     }
 
     public static void main(String[] args) {
-        PApplet.main("Processing.Main");
+        PApplet.main("Processing.Snake.java.Snake");
     }
 }
